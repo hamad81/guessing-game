@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Guess Number Game</title>
+        <meta name="description" content="Guessing game">
+        <meta name="keywords" content="simple, game, guess, number">
+        <meta name="author" content="hamad">
+        <script>
+
+            function game() {
+                const number = Math.floor(Math.random() * 11);
+                let guess;
+                do {
+                    guess = Number(prompt("خمن رقم بين 0-10:"));
+            
+
+                    if (guess === number) {
+                        alert("صح عليك");
+                    } else if (guess < number) {
+                        alert("لا اعلى");
+                    } else {
+                        alert("لا اقل");
+                    }
+                } while (guess !== number);
+
+                if (confirm("تبغا تلعب مره ثانيه?")) {
+                    game();
+                }
+            }
+
+        game();
+        </script>
+</html>
